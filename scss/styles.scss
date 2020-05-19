@@ -34,7 +34,7 @@
 */
 
 // Define base and accent colors
-$base-color: #3498db;
+$base-color: #027571;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
@@ -158,8 +158,8 @@ header {
         text-align: center;
         padding: 10px;
         margin: 0;
-        border-bottom-right-radius: 4px;
-        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
     }
 
     li {
@@ -175,7 +175,7 @@ header {
             color: $base-color-hover;
             text-decoration: none;
             background: #eee;
-            border-radius: 4px;
+            border-radius: 6px;
         }
 
         &:focus {
@@ -268,7 +268,7 @@ footer {
 }
 
 .social {
-    text-align: right;
+    text-align: center;
 
     ul {
         margin: 5px 0 0 0;
@@ -277,32 +277,95 @@ footer {
 
     li {
         display: inline-block;
-        font-size: 1.25em;
+        font-size: 1.5em;
         list-style: none;
+        padding: 10px 10px 40px;
     }
 
     a {
         display: block;
         color: $text;
-        padding: 10px;
 
         &:hover {
-            color: $base-color;
+            color: $base-color-hover;
         }
     }
+}
+
+#lead-social {
+    a {
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.tooltip {
+	// background-color: #ffaffc;
+	// border-radius: 10px;
+	// padding: 10px 15px;
+	position: relative;
+	// margin: 15px;
+	text-align: center;
+}
+
+.tooltip::after {
+	background-color: $background-alt;
+	border-radius: 10px;
+	color: $heading;
+	display: none;
+	padding: 10px 15px;
+	position: absolute;
+	text-align: center;
+	z-index: 999;
+}
+
+.tooltip::before {
+	background-color: $background-alt;
+	content: '';
+	display: none;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+    z-index: 999;
+    
+    // set at bottom
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+}
+
+.tooltip[data]:hover::after {
+    display: block;
+    
+    // set at bottom
+    content: attr(data);
+    font-size: 16px;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, calc(100% + 10px));
+}
+
+.tooltip:hover::before {
+	display: block;
 }
 
 .btn-rounded-white {
     display: inline-block;
     color: #fff;
-    padding: 15px 25px;
-    border: 3px solid #fff;
-    border-radius: 30px;
+    padding: 12px 20px;
+    border: 2px solid #fff;
+    border-radius: 6px;
     @include transition();
 
     &:hover {
         color: $base-color;
         background: #fff;
+        text-decoration: none;
+    }
+
+    &:focus {
+        color: #fff;
         text-decoration: none;
     }
 }
@@ -350,7 +413,7 @@ footer {
     height: 100vh;
     min-height: 500px;
     max-height: 1080px;
-    background: url(../images/lead-bg.jpg);
+    background: url(../static/images/lead-bg.jpg);
     background-size: cover;
     padding: 15px;
     overflow: hidden;
@@ -378,7 +441,7 @@ footer {
     }
 
     h2 {
-        color: lighten($base-color, 25%);
+        color: lighten($base-color, 15%);
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -393,7 +456,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba($base-color-hover, 0.75);
     z-index: 1;
 }
 
@@ -414,15 +477,18 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        border: 3px solid lighten($base-color, 15%);
         text-align:center;
     }
 
     i {
-        animation: pulsate 1.5s ease;
-        animation-iteration-count: infinite;
-        padding-top: 5px;;
+        // animation: pulsate 1.5s ease;
+        // animation-iteration-count: infinite;
+        padding-top: 5px;
     }
+
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
 }
 
 @keyframes pulsate {
@@ -436,6 +502,24 @@ footer {
 
     100% {
         transform: scale(1, 1);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-15px);
     }
 }
 
