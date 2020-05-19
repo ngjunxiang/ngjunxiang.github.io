@@ -77,7 +77,7 @@
             <a href="static/files/NgJunXiang_Resume.pdf" download="NgJunXiang_Resume.pdf" target="_blank"
                 class="btn-rounded-white">My Resume</a>
 
-            <div class="code">
+            <div id="lead-typer">
                 <span id="typer"></span>
             </div>
         </div>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col-md-8 vertical-center">
                     <p>
-                        I am a fresh graduate from Singapore Management University with a Bachelor's of Science
+                        I am a fresh graduate from Singapore Management University with a Bachelor of Science
                         (Information Systems)
                         and a second major in Analytics (Advanced Technology Track). I am a meticulous problem-solver
                         and enjoys using
@@ -419,7 +419,7 @@
     <script src="js/scripts.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
     <script>
-        new TypeIt("#typer", {
+        const typer = new TypeIt("#typer", {
             lifeLike: true,
             cursorChar: "_",
             speed: 150,
@@ -436,10 +436,22 @@
         .move(-1)
         .delete(3)
         .type("(")
+        .exec(async () => await changeColour("#5DAEF2"))
         .move("END")
         .type("; ")
         .pause(1000)
+        .delete(3)
+        .exec(async () => await changeColour("#d5d5df"))
         .go();
+
+        async function changeColour(inputColour) {
+            let promise = new Promise((res, rej) => {
+                document.getElementById("lead-typer").style.color = inputColour;
+                res();
+            });
+
+            let result = await promise; 
+        }
     </script>
 </body>
 
