@@ -236,6 +236,7 @@ header {
 }
 
 footer {
+    background-color: $base-color-hover;
     padding: 50px 0;
 }
 
@@ -244,7 +245,7 @@ footer {
 
     p {
         margin: 0;
-        color: $text;
+        color: $background;
     }
 }
 
@@ -258,12 +259,14 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        border: 3px solid lighten($base-color, 15%);;
         text-align:center;
     }
 
     i {
-        color: $text;
+        color: $background;
+        animation: pulsate 1.5s ease;
+        animation-iteration-count: infinite;
     }
 }
 
@@ -284,35 +287,24 @@ footer {
 
     a {
         display: block;
-        color: $text;
+        color: $background;
 
         &:hover {
-            color: $base-color-hover;
-        }
-    }
-}
-
-#lead-social {
-    a {
-        &:hover {
-            color: #fff;
+            transform: scale(1.2, 1.2);
+            color: lighten($base-color, 15%);
         }
     }
 }
 
 .tooltip {
-	// background-color: #ffaffc;
-	// border-radius: 10px;
-	// padding: 10px 15px;
 	position: relative;
-	// margin: 15px;
 	text-align: center;
 }
 
 .tooltip::after {
-	background-color: $background-alt;
+	background-color: darken($background-alt, 60%);
 	border-radius: 10px;
-	color: $heading;
+	color: $background-alt;
 	display: none;
 	padding: 10px 15px;
 	position: absolute;
@@ -321,7 +313,7 @@ footer {
 }
 
 .tooltip::before {
-	background-color: $background-alt;
+	background-color: darken($background-alt, 60%);
 	content: '';
 	display: none;
 	position: absolute;
@@ -736,6 +728,13 @@ footer {
 
 .project-image {
     float: left;
+
+    img {
+        height: auto; 
+        width: auto; 
+        max-width: 300px; 
+        max-height: 300px;
+    }
 }
 
 .project-info {
