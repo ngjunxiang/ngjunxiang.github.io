@@ -381,8 +381,8 @@ footer {
         position: absolute;
         content: '';
         top: 100%;
-        height: 1px;
-        width: 50px;
+        height: 3px;
+        width: 60px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -533,6 +533,26 @@ footer {
         color: $text;
         margin: 0;
     }
+}
+
+.about-image {
+    // float: left;
+    margin-bottom: 10px;
+
+    img {
+        height: auto; 
+        width: auto; 
+        max-width: 200px; 
+        max-height: 200px;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.vertical-center {
+    padding-top: 4%;
 }
 
 /*
