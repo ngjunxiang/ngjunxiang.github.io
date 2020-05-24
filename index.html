@@ -308,7 +308,7 @@
                             through a flexible and highly
                             customisable simulation.
                         </p>
-                        <a href="https://github.com/ngjunxiang/ABMS-T9" target="_blank">View Project</a>
+                        <a href="https://github.com/ngjunxiang/ABMS-T9" target="_blank">View GitHub</a>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -430,16 +430,15 @@
         .move(-4)
         .delete(1)
         .type("h")
-        .move("END")
-        .move(-1)
+        .move(12)
         .delete(3)
         .type("(")
-        .exec(async () => await changeColour("#5DAEF2"))
+        // .exec(async () => await changeColour("#5DAEF2"))
         .move("END")
         .type("; ")
         .pause(1000)
         .delete(3)
-        .exec(async () => await changeColour("#d5d5df"))
+        // .exec(async () => await changeColour("#d5d5df"))
         .go();
 
         async function changeColour(inputColour) {

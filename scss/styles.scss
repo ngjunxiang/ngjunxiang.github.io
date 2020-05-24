@@ -290,8 +290,9 @@ footer {
         color: $background;
 
         &:hover {
-            transform: scale(1.2, 1.2);
-            color: lighten($base-color, 15%);
+            // transform: scale(1.2, 1.2);
+            // color: lighten($base-color, 15%);
+            color: darken($background-alt, 30%);
         }
     }
 }
@@ -332,7 +333,7 @@ footer {
     
     // set at bottom
     content: attr(data);
-    font-size: 12px;
+    font-size: 14px;
 	bottom: 0;
 	left: 50%;
 	transform: translate(-50%, calc(100% + 10px));
@@ -402,9 +403,12 @@ footer {
 
 #lead-typer {
     color: darken($background-alt, 10%);
-    margin-top: 80px;
-    font-family: Menlo, monospace;
-    font-size: 3rem;
+    margin-top: 50px;
+
+    span {
+        font-family: Menlo, monospace;
+        font-size: 2.25em;
+    }
 }
 
 #lead {
@@ -1001,8 +1005,8 @@ footer {
             font-size: 3em;
         }
 
-        h2 {
-            font-size: 1.75em;
+        h2, span {
+            font-size: 2.2em;
         }
     }
 
@@ -1047,11 +1051,11 @@ footer {
 
     #lead-content {
         h1 {
-            font-size: 2em;
+            font-size: 2.7em;
         }
 
-        h2 {
-            font-size: 1.3em;
+        h2, span {
+            font-size: 2em;
         }
 
         a {
@@ -1096,11 +1100,11 @@ footer {
 
     #lead-content {
         h1 {
-            font-size: 1.5em;
+            font-size: 2em;
         }
 
-        h2 {
-            font-size: 1em;
+        h2, span {
+            font-size: 1.5em;
         }
 
         a {
