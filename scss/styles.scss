@@ -85,7 +85,7 @@ $text: #74808a;
 */
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 16px;
 
     &.active {
@@ -125,19 +125,20 @@ body {
             }
         }
 
-        &:before, &:after {
+        &:before,
+        &:after {
             content: none;
         }
     }
 }
 
 @keyframes dropHeader {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 header {
@@ -259,8 +260,8 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 15%);;
-        text-align:center;
+        border: 3px solid lighten($base-color, 15%);
+        text-align: center;
     }
 
     i {
@@ -298,49 +299,49 @@ footer {
 }
 
 .tooltip {
-	position: relative;
-	text-align: center;
+    position: relative;
+    text-align: center;
 }
 
 .tooltip::after {
-	background-color: darken($background-alt, 60%);
-	border-radius: 10px;
-	color: $background-alt;
-	display: none;
-	padding: 10px 15px;
-	position: absolute;
-	text-align: center;
-	z-index: 999;
+    background-color: darken($background-alt, 60%);
+    border-radius: 10px;
+    color: $background-alt;
+    display: none;
+    padding: 10px 15px;
+    position: absolute;
+    text-align: center;
+    z-index: 999;
 }
 
 .tooltip::before {
-	background-color: darken($background-alt, 60%);
-	content: '';
-	display: none;
-	position: absolute;
-	width: 15px;
-	height: 15px;
+    background-color: darken($background-alt, 60%);
+    content: "";
+    display: none;
+    position: absolute;
+    width: 15px;
+    height: 15px;
     z-index: 999;
-    
+
     // set at bottom
-	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 5px)) rotate(45deg);
 }
 
 .tooltip[data]:hover::after {
     display: block;
-    
+
     // set at bottom
     content: attr(data);
     font-size: 14px;
-	bottom: 0;
-	left: 50%;
-	transform: translate(-50%, calc(100% + 10px));
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 10px));
 }
 
 .tooltip:hover::before {
-	display: block;
+    display: block;
 }
 
 .btn-rounded-white {
@@ -364,11 +365,11 @@ footer {
 }
 
 .shadow {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .shadow-large {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 .heading {
@@ -380,7 +381,7 @@ footer {
 
     &:after {
         position: absolute;
-        content: '';
+        content: "";
         top: 100%;
         height: 3px;
         width: 60px;
@@ -431,7 +432,8 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
 
-    h1, h2 {
+    h1,
+    h2 {
         margin: 0;
     }
 
@@ -482,7 +484,7 @@ footer {
         height: 35px;
         border-radius: 50%;
         border: 3px solid lighten($base-color, 15%);
-        text-align:center;
+        text-align: center;
     }
 
     i {
@@ -552,9 +554,9 @@ footer {
     margin-bottom: 10px;
 
     img {
-        height: auto; 
-        width: auto; 
-        max-width: 200px; 
+        height: auto;
+        width: auto;
+        max-width: 200px;
         max-height: 200px;
     }
 }
@@ -590,7 +592,7 @@ footer {
 
     &:before {
         position: absolute;
-        content: '';
+        content: "";
         top: 0;
         bottom: 0;
         left: 303px;
@@ -603,7 +605,7 @@ footer {
 
     &:after {
         position: absolute;
-        content: '';
+        content: "";
         width: 3px;
         height: 40px;
         background: $base-color;
@@ -614,10 +616,8 @@ footer {
 }
 
 .vtimeline-content {
+    height: 300px;
     margin-left: 350px;
-    background: #fff;
-    border: 1px solid #e6e6e6;
-    padding: 15px;
     border-radius: 3px;
     text-align: left;
 
@@ -637,9 +637,9 @@ footer {
     }
 
     p {
-        color: $text;
-        font-size: 0.9em;
-        margin: 0;
+        color: $background;
+        font-size: 0.7em;
+        margin: 2px;
     }
 }
 
@@ -676,6 +676,74 @@ footer {
     top: 10px;
     font-weight: 300;
     color: #374054;
+}
+
+.experience-logo {
+    height: 65%;
+    max-width: 250px;
+}
+
+.caption {
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 10px 5px;
+    color: $heading;
+}
+
+.experience-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.experience-card-inner {
+    width: 70%;
+    height: 70%;
+    transition: transform 0.8s;
+    // transform-style: preserve-3d;
+}
+
+.experience-card-inner:hover {
+    transform: scale(1.4);
+}
+
+.experience-card-base {
+    background-color: $background;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.experience-card-inner:hover .experience-card-overlay {
+    opacity: 1;
+}
+
+.experience-card-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 6px;
+    background: rgba($base-color-hover, 0.8);
+    z-index: 1;
+    transition: opacity 0.8s ease-in-out;
 }
 
 /*
@@ -721,7 +789,8 @@ footer {
         margin: 0 0 15px 0;
     }
 
-    p, ul {
+    p,
+    ul {
         margin: 0;
         color: $text;
         font-size: 0.9em;
@@ -762,9 +831,9 @@ footer {
     float: left;
 
     img {
-        height: auto; 
-        width: auto; 
-        max-width: 300px; 
+        height: auto;
+        width: auto;
+        max-width: 300px;
         max-height: 300px;
     }
 }
@@ -859,7 +928,8 @@ footer {
     max-width: 500px;
     margin: 0 auto;
 
-    input, textarea {
+    input,
+    textarea {
         display: block;
         width: 100%;
         padding: 10px;
@@ -893,11 +963,11 @@ footer {
         border: none;
         color: $base-color;
         font-weight: 700;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         @include transition();
 
         &:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         }
     }
 }
@@ -939,7 +1009,8 @@ footer {
         margin: 0 0 15px 0;
     }
 
-    p, ul {
+    p,
+    ul {
         margin: 0 0 15px 0;
         color: $text;
         font-size: 0.9em;
@@ -958,12 +1029,11 @@ footer {
 
 // Collapse timeline
 @media only screen and (max-width: 750px) {
-
     #experience-timeline {
-        &:before, &:after {
+        &:before,
+        &:after {
             left: 23px;
         }
-
     }
 
     .vtimeline-date {
@@ -982,12 +1052,10 @@ footer {
     .vtimeline-content {
         margin-left: 70px;
     }
-
 }
 
 // Medium Devices
-@media only screen and (max-width : 992px) {
-
+@media only screen and (max-width: 992px) {
     #lead {
         height: auto;
         min-height: auto;
@@ -1005,7 +1073,8 @@ footer {
             font-size: 3em;
         }
 
-        h2, span {
+        h2,
+        span {
             font-size: 2.2em;
         }
     }
@@ -1017,12 +1086,10 @@ footer {
             text-align: left;
         }
     }
-
 }
 
 // Small Devices
-@media only screen and (max-width : 768px) {
-
+@media only screen and (max-width: 768px) {
     header {
         position: fixed;
         display: none;
@@ -1032,7 +1099,8 @@ footer {
         height: 100%;
     }
 
-    #mobile-menu-open, #mobile-menu-close {
+    #mobile-menu-open,
+    #mobile-menu-close {
         display: block;
     }
 
@@ -1054,7 +1122,8 @@ footer {
             font-size: 2.7em;
         }
 
-        h2, span {
+        h2,
+        span {
             font-size: 2em;
         }
 
@@ -1068,7 +1137,8 @@ footer {
     }
 
     .education-block {
-        h3, span {
+        h3,
+        span {
             float: none;
         }
     }
@@ -1092,18 +1162,17 @@ footer {
     .social {
         text-align: center;
     }
-
 }
 
 // Extra Small Devices
-@media only screen and (max-width : 480px) {
-
+@media only screen and (max-width: 480px) {
     #lead-content {
         h1 {
             font-size: 2em;
         }
 
-        h2, span {
+        h2,
+        span {
             font-size: 1.5em;
         }
 
@@ -1112,5 +1181,4 @@ footer {
             padding: 5px 10px;
         }
     }
-
 }
