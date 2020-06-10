@@ -616,8 +616,6 @@ footer {
 }
 
 .vtimeline-content {
-    height: 300px;
-    margin-left: 350px;
     border-radius: 3px;
     text-align: left;
 
@@ -637,9 +635,24 @@ footer {
     }
 
     p {
-        color: $background;
-        font-size: 0.7em;
-        margin: 2px;
+        font-size: 0.9em;
+        margin: 0;
+        padding: 3px 0;
+    }
+
+    @media screen and (min-width: 590px) {
+        height: 300px;
+        margin-left: 350px;
+
+        h3 {
+            display: none;
+        }
+
+        p {
+            color: $background;
+            font-size: 0.7em;
+            margin: 2px;
+        }
     }
 }
 
@@ -678,72 +691,94 @@ footer {
     color: #374054;
 }
 
-.experience-logo {
-    height: 65%;
-    max-width: 250px;
+@media screen and (max-width: 590px) {
+    .experience-logo {
+        display: none;
+    }
+
+    .caption {
+        font-size: 1.2em;
+        font-weight: 300;
+        color: #7e8890;
+        margin: 0 0 10px 0;
+        display: block;
+    }
+
+    .experience-card {
+        background: #fff;
+        border-radius: 6px;
+        border: 1px solid #e6e6e6;
+        padding: 15px;
+    }
 }
 
-.caption {
-    font-size: 1.2em;
-    font-weight: 400;
-    padding: 10px 5px;
-    color: $heading;
-}
+@media screen and (min-width: 590px) {
+    .experience-logo {
+        height: 65%;
+    }
 
-.experience-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-}
+    .caption {
+        font-size: 1.2em;
+        font-weight: 400;
+        padding: 10px 5px;
+        color: $heading;
+    }
 
-.experience-card-inner {
-    width: 70%;
-    height: 70%;
-    transition: transform 0.8s;
-    // transform-style: preserve-3d;
-}
+    .experience-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
 
-.experience-card-inner:hover {
-    transform: scale(1.4);
-}
+    .experience-card-inner {
+        width: 70%;
+        height: 70%;
+        transition: transform 0.8s;
+        // transform-style: preserve-3d;
+    }
 
-.experience-card-base {
-    background-color: $background;
-    width: 100%;
-    height: 100%;
-    border-radius: 6px;
-    border: 1px solid #e6e6e6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 0;
-}
+    .experience-card-inner:hover {
+        transform: scale(1.4);
+    }
 
-.experience-card-inner:hover .experience-card-overlay {
-    opacity: 1;
-}
+    .experience-card-base {
+        background-color: $background;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        border: 1px solid #e6e6e6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 0;
+    }
 
-.experience-card-overlay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    border-radius: 6px;
-    background: rgba($base-color-hover, 0.8);
-    z-index: 1;
-    transition: opacity 0.8s ease-in-out;
+    .experience-card-inner:hover .experience-card-overlay {
+        opacity: 1;
+    }
+
+    .experience-card-overlay {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 10px;
+        border-radius: 6px;
+        background: rgba($base-color-hover, 0.8);
+        z-index: 1;
+        transition: opacity 0.8s ease-in-out;
+    }
 }
 
 /*
@@ -1028,7 +1063,7 @@ footer {
 */
 
 // Collapse timeline
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 900px) {
     #experience-timeline {
         &:before,
         &:after {
