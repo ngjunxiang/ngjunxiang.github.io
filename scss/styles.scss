@@ -343,6 +343,26 @@ footer {
 	display: block;
 }
 
+.btn-rounded {
+    display: inline-block;
+    color: $base-color;
+    padding: 12px 20px;
+    border: 2px solid $base-color;
+    border-radius: 6px;
+    @include transition();
+
+    &:hover {
+        color: #fff;
+        background: $base-color;
+        text-decoration: none;
+    }
+
+    &:focus {
+        color: $base-color;
+        text-decoration: none;
+    }
+}
+
 .btn-rounded-white {
     display: inline-block;
     color: #fff;
